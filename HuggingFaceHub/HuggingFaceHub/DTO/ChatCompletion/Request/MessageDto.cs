@@ -1,8 +1,16 @@
-﻿using HuggingFaceHub.Utilities;
+﻿using System.Text.Json.Serialization;
+using HuggingFaceHub.Utilities;
 
 namespace HuggingFaceHub.DTO.ChatCompletion;
 
 public class MessageDto {
+    [JsonPropertyName("role")] 
     public string Role { get; set; } = ChatRoles.User;
-    public string Content { get; set; } = "";
+
+    [JsonPropertyName("content")] 
+    public string Content { get; set; } = string.Empty;
+
+    public override string ToString() {
+        return Content;
+    }
 }

@@ -1,6 +1,11 @@
-﻿namespace HuggingFaceHub.DTO.ChatCompletion.Response;
+﻿using System.Text.Json.Serialization;
+
+namespace HuggingFaceHub.DTO.ChatCompletion.Response;
 
 public class ChatCompletionResponseDto {
-    public List<ChatChoiceDto> Choices { get; set; } = new(); 
+    [JsonPropertyName("choices")]
+    public List<ChatChoiceDto> Choices { get; set; } = new();
+
+    [JsonPropertyName("usage")]
     public UsageDto? Usage { get; set; }
 }

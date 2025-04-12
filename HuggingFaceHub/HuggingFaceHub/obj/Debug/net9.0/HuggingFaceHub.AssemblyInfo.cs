@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyDescriptionAttribute(("A HuggingFace client for csharp and .NET developers who wanters to integrate with" +
     " HuggingFace powerful models in easy and flexiable way."))]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97c419d661921ab717b91d71107d448dc5204afd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f631064dc9174190ae0b214c41cccb6217a445e7")]
 [assembly: System.Reflection.AssemblyProductAttribute("HuggingFaceHub")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HuggingFaceHub")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
