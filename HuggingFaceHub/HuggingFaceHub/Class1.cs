@@ -1,4 +1,5 @@
 ﻿using HuggingFaceHub.DTO.ChatCompletion;
+using HuggingFaceHub.DTO.FeatureExtraction.Request;
 using HuggingFaceHub.Service;
 using HuggingFaceHub.Utilities;
 
@@ -8,20 +9,14 @@ public class Class1 {
     public static void Main() {
         var huggingFaceClientService =
             new HuggingFaceClientService(apiToken: "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", 
-                apiUrl : "https://router.huggingface.co/together/v1/chat/completions");
+                apiUrl : "https://router.huggingface.co/hf-inference/pipeline/feature-extraction/intfloat/multilingual-e5-large-instruct");
 
-        var response = huggingFaceClientService.RequestChatCompletionAsync(
-            new ChatCompletionRequestDto() {
-                Model = "Qwen/Qwen2.5-Coder-32B-Instruct",
-                Messages = [
-                    new MessageDto() {
-                        Role = ChatRoles.User,
-                        Content = "HELLO"
-                    }
-                ]
+        var response = huggingFaceClientService.RequestFeatureExtractionAsync(
+            new FeatureExtractionRequestDto() {
+              Inputs = "Hello , how are you"
             }
         );
-
-        Console.WriteLine(response.Result?.Choices[0].Message);
+        
+        Console.WriteLine(response.Result?.Features[0]);
     }
 }
