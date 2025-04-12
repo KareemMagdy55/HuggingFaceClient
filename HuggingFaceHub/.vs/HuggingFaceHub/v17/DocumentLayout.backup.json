@@ -1,0 +1,57 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "K:\\Kareem\u0027s\\Programming vol.3\\Github\\HuggingFaceHub\\HuggingFaceHub\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4F020215-C3F5-4B8F-A77E-60BED37E3981}|HuggingFaceHub\\HuggingFaceHub.csproj|k:\\kareem\u0027s\\programming vol.3\\github\\huggingfacehub\\huggingfacehub\\huggingfacehub\\huggingfacehub.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{4F020215-C3F5-4B8F-A77E-60BED37E3981}|HuggingFaceHub\\HuggingFaceHub.csproj|solutionrelative:huggingfacehub\\huggingfacehub.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 510,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HuggingFaceHub",
+              "DocumentMoniker": "K:\\Kareem\u0027s\\Programming vol.3\\Github\\HuggingFaceHub\\HuggingFaceHub\\HuggingFaceHub\\HuggingFaceHub.csproj",
+              "RelativeDocumentMoniker": "HuggingFaceHub\\HuggingFaceHub.csproj",
+              "ToolTip": "K:\\Kareem\u0027s\\Programming vol.3\\Github\\HuggingFaceHub\\HuggingFaceHub\\HuggingFaceHub\\HuggingFaceHub.csproj*",
+              "RelativeToolTip": "HuggingFaceHub\\HuggingFaceHub.csproj*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAACrAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-10T17:19:52.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:4:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

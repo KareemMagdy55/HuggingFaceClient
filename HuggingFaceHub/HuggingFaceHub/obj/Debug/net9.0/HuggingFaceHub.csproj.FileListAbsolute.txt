@@ -1,0 +1,12 @@
+K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceHub\HuggingFaceHub\bin\Debug\net9.0\HuggingFaceHub.deps.json
+K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceHub\HuggingFaceHub\bin\Debug\net9.0\HuggingFaceHub.dll
+K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceHub\HuggingFaceHub\bin\Debug\net9.0\HuggingFaceHub.pdb
+K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceHub\HuggingFaceHub\obj\Debug\net9.0\HuggingFaceHub.GeneratedMSBuildEditorConfig.editorconfig
+K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceHub\HuggingFaceHub\obj\Debug\net9.0\HuggingFaceHub.AssemblyInfoInputs.cache
+K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceHub\HuggingFaceHub\obj\Debug\net9.0\HuggingFaceHub.AssemblyInfo.cs
+K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceHub\HuggingFaceHub\obj\Debug\net9.0\HuggingFaceHub.csproj.CoreCompileInputs.cache
+K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceHub\HuggingFaceHub\obj\Debug\net9.0\HuggingFaceHub.sourcelink.json
+K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceHub\HuggingFaceHub\obj\Debug\net9.0\HuggingFaceHub.dll
+K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceHub\HuggingFaceHub\obj\Debug\net9.0\refint\HuggingFaceHub.dll
+K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceHub\HuggingFaceHub\obj\Debug\net9.0\HuggingFaceHub.pdb
+K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceHub\HuggingFaceHub\obj\Debug\net9.0\ref\HuggingFaceHub.dll
