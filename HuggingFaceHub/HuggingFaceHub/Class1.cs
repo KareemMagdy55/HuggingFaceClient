@@ -8,7 +8,7 @@ public class Class1 {
     public static void Main() {
         var huggingFaceClientService =
             new HuggingFaceClientService(apiToken: "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", 
-                "https://router.huggingface.co/together/v1/chat/completions");
+                apiUrl : "https://router.huggingface.co/together/v1/chat/completions");
 
         var response = huggingFaceClientService.RequestChatCompletionAsync(
             new ChatCompletionRequestDto() {
