@@ -15,5 +15,6 @@ public class HuggingFaceClientService {
         HuggingFaceGlobalConfig.ApiToken = apiToken;
         HuggingFaceGlobalConfig.ApiBaseUrl = apiBaseUrl;
     }
-    
+    public ChatCompletionService ChatCompletionService { get; set; } = new ChatCompletionService();
+
 }

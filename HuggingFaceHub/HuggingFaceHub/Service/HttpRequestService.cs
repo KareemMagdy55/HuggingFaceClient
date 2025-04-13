@@ -39,17 +39,17 @@ public static class HttpRequestService {
         }
     }
 
-    public static async IAsyncEnumerable<string?> _RequestStreamAsync<TRequest>(
-        TRequest requestDto,
-        string endpoint
+    public static async IAsyncEnumerable<TResponse?> _RequestStreamAsync<TRequest, TResponse>(
+        TRequest requestDto
     )
+        where TResponse : class
         where TRequest : class {
-        HttpResponseMessage? response = new HttpResponseMessage();
+        var response = new HttpResponseMessage();
         try {
             var requestJson = JsonSerializer.Serialize(requestDto);
 
             var requestMessage =
-                new HttpRequestMessage(HttpMethod.Post, $"{HuggingFaceGlobalConfig.ApiBaseUrl}/{endpoint}") {
+                new HttpRequestMessage(HttpMethod.Post, HuggingFaceGlobalConfig.ApiBaseUrl) {
                     Content = new StringContent(requestJson, Encoding.UTF8, "application/json")
                 };
 
@@ -66,25 +66,29 @@ public static class HttpRequestService {
                 Console.WriteLine($"API Error ({response.StatusCode}): {error}");
                 yield break;
             }
-            
         }
         catch (Exception e) {
             Console.WriteLine($"Exception: {e.Message}");
         }
+
         var stream = await response.Content.ReadAsStreamAsync().ConfigureAwait(false);
         using var reader = new StreamReader(stream);
 
-        while (!reader.EndOfStream)
-        {
+        while (!reader.EndOfStream) {
             var line = await reader.ReadLineAsync();
+            if (line.StartsWith("data:"))
+                line = line[6..].Trim(); // To get rid of "token"
 
-            if (string.IsNullOrWhiteSpace(line))
-                continue;
+            if (line == "[DONE]")
+                yield break;
 
-            if (line.StartsWith("data: "))
-                line = line.Substring(6); // To get rid of "token"
+            TResponse? parsed = null;
+            if (!string.IsNullOrEmpty(line))
+                parsed = JsonSerializer.Deserialize<TResponse>(line,
+                    new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
-            yield return line;
+
+            yield return parsed;
         }
     }
 }

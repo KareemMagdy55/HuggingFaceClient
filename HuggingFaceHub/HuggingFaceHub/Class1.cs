@@ -9,14 +9,22 @@ public class Class1 {
     public static void Main() {
         var huggingFaceClientService =
             new HuggingFaceClientService(apiToken: "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", 
-                apiUrl : "https://router.huggingface.co/hf-inference/pipeline/feature-extraction/intfloat/multilingual-e5-large-instruct");
-
-        var response = huggingFaceClientService.RequestFeatureExtractionAsync(
-            new FeatureExtractionRequestDto() {
-              Inputs = "Hello , how are you"
-            }
-        );
+                apiBaseUrl : "https://router.huggingface.co/together/v1/chat/completions");
         
-        Console.WriteLine(response.Result?.Features[0]);
+        var messages = huggingFaceClientService.ChatCompletionService.CreateChatStreamAsync(
+            new ChatCompletionRequestDto()
+            {
+                Model = "Qwen/Qwen2.5-Coder-32B-Instruct",
+                Messages = [
+                    new MessageDto() {
+                        Role = ChatRoles.User,
+                        Content = "What is weather today?"
+                    }
+                ]
+            });
+        foreach (var message in messages.Result) {
+            Console.WriteLine(message.Choices[0].Delta.Content);
+        }
+        
     }
 }
