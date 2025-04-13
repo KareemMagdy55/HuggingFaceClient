@@ -9,11 +9,10 @@ public class Class1 {
     public static void Main() {
         var huggingFaceClientService =
             new HuggingFaceClientService(apiToken: "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", 
-                apiBaseUrl : "https://router.huggingface.co/together/v1/chat/completions");
+                apiBaseUrl : "https://router.huggingface.co/replicate/v1/models/black-forest-labs/flux-dev/predictions");
         
         var messages = huggingFaceClientService.ChatCompletionService.CreateChatStreamAsync(
-            new ChatCompletionRequestDto()
-            {
+            new ChatCompletionRequestDto {
                 Model = "Qwen/Qwen2.5-Coder-32B-Instruct",
                 Messages = [
                     new MessageDto() {
