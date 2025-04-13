@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>HuggingFaceClient</id>
+    <version>1.0.0</version>
+    <title>HuggingFaceHub</title>
+    <authors>Kareem Magdy</authors>
+    <description>A HuggingFace client for csharp and .NET developers who wanters to integrate with HuggingFace powerful models in easy and flexiable way.</description>
+    <repository type="git" commit="d441930b141827064db366f4b9f0875009af9d5d" />
+    <dependencies>
+      <group targetFramework="net9.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceHub\HuggingFaceClient\bin\Debug\net9.0\HuggingFaceClient.dll" target="lib\net9.0\HuggingFaceClient.dll" />
+  </files>
+</package>
