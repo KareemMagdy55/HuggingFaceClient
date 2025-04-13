@@ -6,7 +6,7 @@
     <title>HuggingFaceHub</title>
     <authors>Kareem Magdy</authors>
     <description>A HuggingFace client for csharp and .NET developers who wanters to integrate with HuggingFace powerful models in easy and flexiable way.</description>
-    <repository type="git" commit="d441930b141827064db366f4b9f0875009af9d5d" />
+    <repository type="git" commit="547bdda31617ab3e72cdab99304d3b2892476440" />
     <dependencies>
       <group targetFramework="net9.0" />
     </dependencies>

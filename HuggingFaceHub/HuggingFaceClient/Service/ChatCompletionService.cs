@@ -4,10 +4,11 @@ using HuggingFaceClient.DTO.ChatCompletion.Response;
 namespace HuggingFaceClient.Service;
 
 public class ChatCompletionService {
-    public async Task<ChatCompletionResponseDto?> CreateChatAsync(ChatCompletionRequestDto chatCompletionRequestDto) =>
-        await HttpRequestService._RequestAsync<ChatCompletionRequestDto, ChatCompletionResponseDto>(
+    public async Task<ChatCompletionResponseDto?> CreateChatAsync(ChatCompletionRequestDto chatCompletionRequestDto) {
+        chatCompletionRequestDto.Stream = false;
+        return await HttpRequestService._RequestAsync<ChatCompletionRequestDto, ChatCompletionResponseDto>(
             chatCompletionRequestDto);
-
+    }
 
     public async Task<List<ChatCompletionStreamResponseDto>> CreateChatStreamAsync(
         ChatCompletionRequestDto chatCompletionRequestDto) {

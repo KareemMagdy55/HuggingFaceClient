@@ -1,16 +1,33 @@
 ﻿using System.Text.Json.Serialization;
 using HuggingFaceClient.Utilities;
 
-namespace HuggingFaceClient.DTO.ChatCompletion;
+namespace HuggingFaceClient.DTO.ChatCompletion
+{
+    ///
 
-public class MessageDto {
-    [JsonPropertyName("role")] 
-    public string Role { get; set; } = ChatRoles.User;
 
-    [JsonPropertyName("content")] 
-    public string Content { get; set; } = string.Empty;
+    /// Represents a message in the chat conversation.
+    ///
 
-    public override string ToString() {
-        return Content;
+    public class MessageDto
+    {
+        ///
+
+        /// Specifies the role associated with the message. Default is ChatRoles.User.
+        ///
+
+        [JsonPropertyName("role")]
+        public string Role { get; set; } = ChatRoles.User;
+
+        /// <summary>
+        /// Specifies the textual content of the message.
+        /// </summary>
+        [JsonPropertyName("content")]
+        public string Content { get; set; } = string.Empty;
+
+       public override string ToString()
+        {
+            return Content;
+        }
     }
 }

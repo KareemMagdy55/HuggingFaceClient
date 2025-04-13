@@ -1,13 +1,33 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace HuggingFaceClient.DTO.ChatCompletion.Response;
+namespace HuggingFaceClient.DTO.ChatCompletion.Response
+{
+    ///
 
-public class UsageDto {
-    [JsonPropertyName("prompt_tokens")]
-    public int PromptTokens { get; set; }
 
-    [JsonPropertyName("completion_tokens")]
-    public int CompletionTokens { get; set; }
+    /// Contains information about token usage during chat completion.
+    ///
 
-    [JsonPropertyName("total_tokens")]
-    public int TotalTokens { get; set; }}
+    public class UsageDto
+    {
+        ///
+
+        /// Indicates the number of tokens in the prompt.
+        ///
+
+        [JsonPropertyName("prompt_tokens")]
+        public int PromptTokens { get; set; }
+
+        /// <summary>
+        /// Indicates the number of tokens generated in the completion.
+        /// </summary>
+        [JsonPropertyName("completion_tokens")]
+        public int CompletionTokens { get; set; }
+
+        /// <summary>
+        /// Represents the total number of tokens in the request (prompt and completion).
+        /// </summary>
+        [JsonPropertyName("total_tokens")]
+        public int TotalTokens { get; set; }
+    }
+}

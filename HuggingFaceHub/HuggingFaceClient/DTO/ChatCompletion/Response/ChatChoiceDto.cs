@@ -1,11 +1,33 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace HuggingFaceClient.DTO.ChatCompletion.Response;
+namespace HuggingFaceClient.DTO.ChatCompletion.Response
+{
+    ///
 
-public class ChatChoiceDto {
-    [JsonPropertyName("index")] public int Index { get; set; }
 
-    [JsonPropertyName("message")] public MessageDto Message { get; set; } = new();
+    /// Represents a choice option in the chat completion response.
+    ///
 
-    [JsonPropertyName("finish_reason")] public string FinishReason { get; set; } = string.Empty;
+    public class ChatChoiceDto
+    {
+        ///
+
+        /// The index corresponding to a particular chat choice.
+        ///
+
+        [JsonPropertyName("index")]
+        public int Index { get; set; }
+
+        /// <summary>
+        /// The message returned for the chat choice.
+        /// </summary>
+        [JsonPropertyName("message")]
+        public MessageDto Message { get; set; } = new();
+
+        /// <summary>
+        /// A description of why the chat completion finished.
+        /// </summary>
+        [JsonPropertyName("finish_reason")]
+        public string FinishReason { get; set; } = string.Empty;
+    }
 }
