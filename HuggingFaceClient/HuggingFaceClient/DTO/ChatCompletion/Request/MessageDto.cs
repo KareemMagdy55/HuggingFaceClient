@@ -3,11 +3,17 @@ using HuggingFaceClient.Utilities;
 
 namespace HuggingFaceClient.DTO.ChatCompletion
 {
+    /// <summary>
+    /// Represents a single message exchanged within a chat conversation, typically used
+    /// as part of a chat history in a chat completion request.
     ///
-
-
-    /// Represents a message in the chat conversation.
+    /// Each message contains:
+    /// - <c>Role</c>: The source of the message (e.g., "user", "assistant", or "system").
+    /// - <c>Content</c>: The textual content of the message.
     ///
+    /// This DTO is used to construct the conversational context that the model uses
+    /// to generate appropriate and coherent responses.
+    /// </summary>
 
     public class MessageDto
     {

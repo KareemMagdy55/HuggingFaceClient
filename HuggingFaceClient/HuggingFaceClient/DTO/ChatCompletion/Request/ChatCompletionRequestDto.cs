@@ -3,12 +3,20 @@ using System.Text.Json.Serialization;
 
 namespace HuggingFaceClient.DTO.ChatCompletion
 {
-    ///
-
-
-    /// Represents a request for a chat completion operation.
-    ///
-
+    /// <summary>
+    /// Represents a request payload used to generate a chat-based completion from a language model.
+    /// 
+    /// This DTO includes:
+    /// - <c>Model</c>: The identifier of the language model to use.
+    /// - <c>Messages</c>: A list of message objects forming the chat history and context.
+    /// - <c>Temperature</c>: A value (0–1) controlling randomness in the output; higher means more randomness.
+    /// - <c>TopP</c>: Controls the nucleus sampling; limits choices to the most probable tokens with cumulative probability <c>top_p</c>.
+    /// - <c>MaxNewTokens</c>: Specifies the maximum number of tokens to generate in the response.
+    /// - <c>RepetitionPenalty</c>: Penalizes repeated phrases or tokens to improve diversity.
+    /// - <c>Stream</c>: If true, the output is returned as a stream of tokens.
+    /// 
+    /// These properties allow fine-grained control over how the model generates and returns chat responses.
+    /// </summary>
     public class ChatCompletionRequestDto
     {
         ///
