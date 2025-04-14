@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>HuggingFaceClient</id>
+    <version>1.0.2</version>
+    <title>HuggingFaceClient</title>
+    <authors>Kareem Magdy</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <icon>logo.png</icon>
+    <readme>README.md</readme>
+    <projectUrl>https://github.com/KareemMagdy55/HuggingFaceClient</projectUrl>
+    <description>A HuggingFace client for C# and .NET developers who want to integrate HuggingFace's powerful models in an easy and flexible way.</description>
+    <tags>huggingface nlp chatgpt llm ai dotnet ml image feature-extraction api csharp</tags>
+    <repository type="git" url="https://github.com/KareemMagdy55/HuggingFaceClient" commit="75c1df2cd71e3e90ffa914f0c5db7b0eff6dc192" />
+    <dependencies>
+      <group targetFramework="net9.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\bin\Debug\net9.0\HuggingFaceClient.pdb" target="lib\net9.0\HuggingFaceClient.pdb" />
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\bin\Debug\net9.0\HuggingFaceClient.dll" target="lib\net9.0\HuggingFaceClient.dll" />
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\bin\Debug\net9.0\HuggingFaceClient.xml" target="lib\net9.0\HuggingFaceClient.xml" />
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\README.md" target="\README.md" />
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\logo.png" target="\logo.png" />
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\Builders\ChatCompletionRequestBuilder.cs" target="src\HuggingFaceClient\Builders\ChatCompletionRequestBuilder.cs" />
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\Builders\FeatureExtractionRequestBuilder.cs" target="src\HuggingFaceClient\Builders\FeatureExtractionRequestBuilder.cs" />
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\Builders\TextToImageRequestBuilder.cs" target="src\HuggingFaceClient\Builders\TextToImageRequestBuilder.cs" />
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\DTO\ChatCompletion\Request\ChatCompletionRequestDto.cs" target="src\HuggingFaceClient\DTO\ChatCompletion\Request\ChatCompletionRequestDto.cs" />
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\DTO\ChatCompletion\Request\MessageDto.cs" target="src\HuggingFaceClient\DTO\ChatCompletion\Request\MessageDto.cs" />
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\DTO\ChatCompletion\Response\ChatChoiceDto.cs" target="src\HuggingFaceClient\DTO\ChatCompletion\Response\ChatChoiceDto.cs" />
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\DTO\ChatCompletion\Response\ChatCompletionResponseDto.cs" target="src\HuggingFaceClient\DTO\ChatCompletion\Response\ChatCompletionResponseDto.cs" />
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\DTO\ChatCompletion\Response\ChatCompletionStreamResponseDto.cs" target="src\HuggingFaceClient\DTO\ChatCompletion\Response\ChatCompletionStreamResponseDto.cs" />
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\DTO\ChatCompletion\Response\ChatStreamChoiceDto.cs" target="src\HuggingFaceClient\DTO\ChatCompletion\Response\ChatStreamChoiceDto.cs" />
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\DTO\ChatCompletion\Response\DeltaDto.cs" target="src\HuggingFaceClient\DTO\ChatCompletion\Response\DeltaDto.cs" />
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\DTO\ChatCompletion\Response\UsageDto.cs" target="src\HuggingFaceClient\DTO\ChatCompletion\Response\UsageDto.cs" />
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\DTO\FeatureExtraction\Request\FeatureExtractionRequestDto.cs" target="src\HuggingFaceClient\DTO\FeatureExtraction\Request\FeatureExtractionRequestDto.cs" />
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\DTO\FeatureExtraction\Response\FeatureExtractionResponseDto.cs" target="src\HuggingFaceClient\DTO\FeatureExtraction\Response\FeatureExtractionResponseDto.cs" />
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\DTO\TextToImage\Request\TextToImageParametersDto.cs" target="src\HuggingFaceClient\DTO\TextToImage\Request\TextToImageParametersDto.cs" />
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\DTO\TextToImage\Request\TextToImageRequestDto.cs" target="src\HuggingFaceClient\DTO\TextToImage\Request\TextToImageRequestDto.cs" />
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\DTO\TextToImage\Response\DataChunkDto.cs" target="src\HuggingFaceClient\DTO\TextToImage\Response\DataChunkDto.cs" />
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\DTO\TextToImage\Response\TextToImageResponseDto.cs" target="src\HuggingFaceClient\DTO\TextToImage\Response\TextToImageResponseDto.cs" />
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\Service\ChatCompletionService.cs" target="src\HuggingFaceClient\Service\ChatCompletionService.cs" />
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\Service\FeatureExtractionService.cs" target="src\HuggingFaceClient\Service\FeatureExtractionService.cs" />
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\Service\HfClient.cs" target="src\HuggingFaceClient\Service\HfClient.cs" />
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\Service\HttpRequestService.cs" target="src\HuggingFaceClient\Service\HttpRequestService.cs" />
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\Service\HuggingFaceServiceOrchestrator.cs" target="src\HuggingFaceClient\Service\HuggingFaceServiceOrchestrator.cs" />
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\Service\TextToImageService.cs" target="src\HuggingFaceClient\Service\TextToImageService.cs" />
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\Utilities\ChatRoles.cs" target="src\HuggingFaceClient\Utilities\ChatRoles.cs" />
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\Utilities\HuggingFaceGlobalConfig.cs" target="src\HuggingFaceClient\Utilities\HuggingFaceGlobalConfig.cs" />
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\obj\Debug\net9.0\HuggingFaceClient.GlobalUsings.g.cs" target="src\HuggingFaceClient\obj\Debug\net9.0\HuggingFaceClient.GlobalUsings.g.cs" />
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\HuggingFaceClient.csproj" target="src\HuggingFaceClient\HuggingFaceClient.csproj" />
+  </files>
+</package>

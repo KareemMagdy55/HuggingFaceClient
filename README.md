@@ -13,7 +13,7 @@ A powerful and developer-friendly .NET client for accessing Hugging Face models 
 Install via NuGet:
 
 ```bash
-dotnet add package HuggingFace.Client
+dotnet add package HuggingFaceClient --version 1.0.x
 ```
 
 ---

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>HuggingFaceClient</id>
+    <version>1.0.2</version>
+    <title>HuggingFaceClient</title>
+    <authors>Kareem Magdy</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <icon>logo.png</icon>
+    <readme>README.md</readme>
+    <projectUrl>https://github.com/KareemMagdy55/HuggingFaceClient</projectUrl>
+    <description>A HuggingFace client for C# and .NET developers who want to integrate HuggingFace's powerful models in an easy and flexible way.</description>
+    <tags>huggingface nlp chatgpt llm ai dotnet ml image feature-extraction api csharp</tags>
+    <repository type="git" url="https://github.com/KareemMagdy55/HuggingFaceClient" commit="75c1df2cd71e3e90ffa914f0c5db7b0eff6dc192" />
+    <dependencies>
+      <group targetFramework="net9.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\bin\Debug\net9.0\HuggingFaceClient.dll" target="lib\net9.0\HuggingFaceClient.dll" />
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\bin\Debug\net9.0\HuggingFaceClient.xml" target="lib\net9.0\HuggingFaceClient.xml" />
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\README.md" target="\README.md" />
+    <file src="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceClient\HuggingFaceClient\logo.png" target="\logo.png" />
+  </files>
+</package>

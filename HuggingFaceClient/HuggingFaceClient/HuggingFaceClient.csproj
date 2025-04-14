@@ -16,7 +16,8 @@
             <Title>HuggingFaceClient</Title>
             <PackageId>HuggingFaceClient</PackageId>
             <PackageReadmeFile>README.md</PackageReadmeFile>
-            <Version>1.0.1</Version>
+            <Version>1.0.3</Version>
+            <GenerateDocumentationFile>true</GenerateDocumentationFile>
             <Authors>Kareem Magdy</Authors>
             <Company>YourCompany</Company>
             <Description>A HuggingFace client for C# and .NET developers who want to integrate HuggingFace's powerful models in an easy and flexible way.</Description>

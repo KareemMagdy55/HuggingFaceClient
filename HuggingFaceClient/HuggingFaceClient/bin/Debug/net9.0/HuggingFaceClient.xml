@@ -1,0 +1,523 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HuggingFaceClient</name>
+    </assembly>
+    <members>
+        <member name="M:HuggingFaceClient.Builders.HfClient.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HuggingFaceClient.Builders.HfClient"/> class.
+            </summary>
+            <param name="apiToken">The Hugging Face API authentication token.</param>
+            <param name="apiBaseUrl">The base URL of the Hugging Face API endpoint.</param>
+            <example>
+            <code>
+            var service = new HdClient("hf_xxxx", "https://api-inference.huggingface.co/");
+            </code>
+            </example>
+        </member>
+        <member name="T:HuggingFaceClient.DTO.ChatCompletion.ChatCompletionRequestDto">
+            <summary>
+            Represents a request payload used to generate a chat-based completion from a language model.
+            
+            This DTO includes:
+            - <c>Model</c>: The identifier of the language model to use.
+            - <c>Messages</c>: A list of message objects forming the chat history and context.
+            - <c>Temperature</c>: A value (0–1) controlling randomness in the output; higher means more randomness.
+            - <c>TopP</c>: Controls the nucleus sampling; limits choices to the most probable tokens with cumulative probability <c>top_p</c>.
+            - <c>MaxNewTokens</c>: Specifies the maximum number of tokens to generate in the response.
+            - <c>RepetitionPenalty</c>: Penalizes repeated phrases or tokens to improve diversity.
+            - <c>Stream</c>: If true, the output is returned as a stream of tokens.
+            
+            These properties allow fine-grained control over how the model generates and returns chat responses.
+            </summary>
+        </member>
+        <member name="P:HuggingFaceClient.DTO.ChatCompletion.ChatCompletionRequestDto.Model">
+            
+             the identifier of the model to be used for chat completion.
+            
+        </member>
+        <member name="P:HuggingFaceClient.DTO.ChatCompletion.ChatCompletionRequestDto.Messages">
+            <summary>
+            the list of messages that form the conversation context.
+            </summary>
+        </member>
+        <member name="P:HuggingFaceClient.DTO.ChatCompletion.ChatCompletionRequestDto.Temperature">
+            <summary>
+            the temperature value to control randomness in the chat completion.
+            </summary>
+        </member>
+        <member name="P:HuggingFaceClient.DTO.ChatCompletion.ChatCompletionRequestDto.TopP">
+            <summary>
+            the top-p (nucleus sampling) parameter to adjust the token selection process.
+            </summary>
+        </member>
+        <member name="P:HuggingFaceClient.DTO.ChatCompletion.ChatCompletionRequestDto.MaxNewTokens">
+            <summary>
+            the maximum number of new tokens to generate.
+            </summary>
+        </member>
+        <member name="P:HuggingFaceClient.DTO.ChatCompletion.ChatCompletionRequestDto.RepetitionPenalty">
+            <summary>
+            the repetition penalty factor to discourage repeating tokens.
+            </summary>
+        </member>
+        <member name="P:HuggingFaceClient.DTO.ChatCompletion.ChatCompletionRequestDto.Stream">
+            <summary>
+            a boolean value indicating whether the response should be streamed.
+            </summary>
+        </member>
+        <member name="T:HuggingFaceClient.DTO.ChatCompletion.MessageDto">
+             <summary>
+             Represents a single message exchanged within a chat conversation, typically used
+             as part of a chat history in a chat completion request.
+            
+             Each message contains:
+             - <c>Role</c>: The source of the message (e.g., "user", "assistant", or "system").
+             - <c>Content</c>: The textual content of the message.
+            
+             This DTO is used to construct the conversational context that the model uses
+             to generate appropriate and coherent responses.
+             </summary>
+        </member>
+        <member name="P:HuggingFaceClient.DTO.ChatCompletion.MessageDto.Role">
+            
+             Specifies the role associated with the message. Default is ChatRoles.User.
+            
+        </member>
+        <member name="P:HuggingFaceClient.DTO.ChatCompletion.MessageDto.Content">
+            <summary>
+            Specifies the textual content of the message.
+            </summary>
+        </member>
+        <member name="T:HuggingFaceClient.DTO.ChatCompletion.Response.ChatChoiceDto">
+            
+             Represents a choice option in the chat completion response.
+            
+        </member>
+        <member name="P:HuggingFaceClient.DTO.ChatCompletion.Response.ChatChoiceDto.Index">
+            
+             The index corresponding to a particular chat choice.
+            
+        </member>
+        <member name="P:HuggingFaceClient.DTO.ChatCompletion.Response.ChatChoiceDto.Message">
+            <summary>
+            The message returned for the chat choice.
+            </summary>
+        </member>
+        <member name="P:HuggingFaceClient.DTO.ChatCompletion.Response.ChatChoiceDto.FinishReason">
+            <summary>
+            A description of why the chat completion finished.
+            </summary>
+        </member>
+        <member name="T:HuggingFaceClient.DTO.ChatCompletion.Response.ChatCompletionResponseDto">
+            
+             Represents a response from the chat completion operation.
+            
+        </member>
+        <member name="P:HuggingFaceClient.DTO.ChatCompletion.Response.ChatCompletionResponseDto.Choices">
+            
+             Collection of available chat choices.
+            
+        </member>
+        <member name="P:HuggingFaceClient.DTO.ChatCompletion.Response.ChatCompletionResponseDto.Usage">
+            <summary>
+            Details about the resource usage during the chat completion operation.
+            </summary>
+        </member>
+        <member name="T:HuggingFaceClient.DTO.ChatCompletion.Response.ChatStreamChoiceDto">
+            
+             Represents a single choice in a streaming chat completion response.
+            
+        </member>
+        <member name="P:HuggingFaceClient.DTO.ChatCompletion.Response.ChatStreamChoiceDto.Index">
+            
+             The index of this chat stream choice.
+            
+        </member>
+        <member name="P:HuggingFaceClient.DTO.ChatCompletion.Response.ChatStreamChoiceDto.Text">
+            <summary>
+            The text output related to this choice.
+            </summary>
+        </member>
+        <member name="P:HuggingFaceClient.DTO.ChatCompletion.Response.ChatStreamChoiceDto.Logprobs">
+            <summary>
+            Supplemental log probability information for the text output.
+            </summary>
+        </member>
+        <member name="P:HuggingFaceClient.DTO.ChatCompletion.Response.ChatStreamChoiceDto.FinishReason">
+            <summary>
+            The reason why this chat completion stream finished.
+            </summary>
+        </member>
+        <member name="P:HuggingFaceClient.DTO.ChatCompletion.Response.ChatStreamChoiceDto.Seed">
+            <summary>
+            Additional seed data used in the generation process.
+            </summary>
+        </member>
+        <member name="P:HuggingFaceClient.DTO.ChatCompletion.Response.ChatStreamChoiceDto.Delta">
+            <summary>
+            Represents delta changes or incremental updates associated with the output.
+            </summary>
+        </member>
+        <member name="T:HuggingFaceClient.DTO.ChatCompletion.Response.DeltaDto">
+            
+             Provides delta information related to a token in the chat completion response.
+            
+        </member>
+        <member name="P:HuggingFaceClient.DTO.ChatCompletion.Response.DeltaDto.TokenId">
+            
+             Token identifier.
+            
+        </member>
+        <member name="P:HuggingFaceClient.DTO.ChatCompletion.Response.DeltaDto.Role">
+            <summary>
+            Role associated with the token.
+            </summary>
+        </member>
+        <member name="P:HuggingFaceClient.DTO.ChatCompletion.Response.DeltaDto.Content">
+            <summary>
+            Content change represented by the delta.
+            </summary>
+        </member>
+        <member name="P:HuggingFaceClient.DTO.ChatCompletion.Response.DeltaDto.ToolCalls">
+            <summary>
+            Details regarding external tool calls.
+            </summary>
+        </member>
+        <member name="T:HuggingFaceClient.DTO.ChatCompletion.Response.UsageDto">
+            
+             Contains information about token usage during chat completion.
+            
+        </member>
+        <member name="P:HuggingFaceClient.DTO.ChatCompletion.Response.UsageDto.PromptTokens">
+            
+             Indicates the number of tokens in the prompt.
+            
+        </member>
+        <member name="P:HuggingFaceClient.DTO.ChatCompletion.Response.UsageDto.CompletionTokens">
+            <summary>
+            Indicates the number of tokens generated in the completion.
+            </summary>
+        </member>
+        <member name="P:HuggingFaceClient.DTO.ChatCompletion.Response.UsageDto.TotalTokens">
+            <summary>
+            Represents the total number of tokens in the request (prompt and completion).
+            </summary>
+        </member>
+        <member name="T:HuggingFaceClient.DTO.ChatCompletion.ChatCompletionStreamResponseDto">
+            
+             Represents a streaming response from a chat completion operation.
+            
+        </member>
+        <member name="P:HuggingFaceClient.DTO.ChatCompletion.ChatCompletionStreamResponseDto.Id">
+            
+             Unique identifier for this streaming response.
+            
+        </member>
+        <member name="P:HuggingFaceClient.DTO.ChatCompletion.ChatCompletionStreamResponseDto.ObjectType">
+            <summary>
+            Indicates the type of object returned.
+            </summary>
+        </member>
+        <member name="P:HuggingFaceClient.DTO.ChatCompletion.ChatCompletionStreamResponseDto.Created">
+            <summary>
+            The timestamp (in Unix time) marking when the response was created.
+            </summary>
+        </member>
+        <member name="P:HuggingFaceClient.DTO.ChatCompletion.ChatCompletionStreamResponseDto.Choices">
+            <summary>
+            List of choices provided in the streaming response.
+            </summary>
+        </member>
+        <member name="P:HuggingFaceClient.DTO.ChatCompletion.ChatCompletionStreamResponseDto.Model">
+            <summary>
+            The identifier or name of the model used for generating the response.
+            </summary>
+        </member>
+        <member name="P:HuggingFaceClient.DTO.ChatCompletion.ChatCompletionStreamResponseDto.Usage">
+            <summary>
+            Provides additional usage information; typically includes resource consumption details.
+            </summary>
+        </member>
+        <member name="T:HuggingFaceClient.DTO.FeatureExtraction.Request.FeatureExtractionRequestDto">
+            
+             Represents a request object for feature extraction operations.
+            
+        </member>
+        <member name="P:HuggingFaceClient.DTO.FeatureExtraction.Request.FeatureExtractionRequestDto.Inputs">
+            
+             Specifies the input data for feature extraction.
+            
+        </member>
+        <member name="P:HuggingFaceClient.DTO.FeatureExtraction.Request.FeatureExtractionRequestDto.Normalize">
+            <summary>
+            Indicates whether to apply normalization on the input data. Default is false.
+            </summary>
+        </member>
+        <member name="P:HuggingFaceClient.DTO.FeatureExtraction.Request.FeatureExtractionRequestDto.PromptName">
+            <summary>
+            Specifies an optional name for the prompt.
+            </summary>
+        </member>
+        <member name="P:HuggingFaceClient.DTO.FeatureExtraction.Request.FeatureExtractionRequestDto.Truncate">
+            <summary>
+            Determines whether to truncate the input if it exceeds allowed length.
+            </summary>
+        </member>
+        <member name="P:HuggingFaceClient.DTO.FeatureExtraction.Request.FeatureExtractionRequestDto.TruncationDirection">
+            <summary>
+            Specifies the direction to use for truncation, if applicable.
+            </summary>
+        </member>
+        <member name="T:HuggingFaceClient.DTO.FeatureExtraction.Response.FeatureExtractionResponseDto">
+            
+             Represents the response containing extracted features.
+            
+        </member>
+        <member name="P:HuggingFaceClient.DTO.FeatureExtraction.Response.FeatureExtractionResponseDto.Features">
+            
+             Contains the extracted feature set.
+            
+        </member>
+        <member name="T:HuggingFaceClient.DTO.TextToImage.TextToImageParametersDto">
+            
+             Contains parameters for generating images from text prompts.
+            
+        </member>
+        <member name="P:HuggingFaceClient.DTO.TextToImage.TextToImageParametersDto.GuidanceScale">
+            
+             Specifies the guidance scale that controls the adherence of the generated image to the text prompt.
+            
+        </member>
+        <member name="P:HuggingFaceClient.DTO.TextToImage.TextToImageParametersDto.NegativePrompt">
+            <summary>
+            Specifies a negative prompt that influences the image generation to avoid certain elements.
+            </summary>
+        </member>
+        <member name="P:HuggingFaceClient.DTO.TextToImage.TextToImageParametersDto.NumInferenceSteps">
+            <summary>
+            Specifies the number of inference steps to be used during image generation.
+            </summary>
+        </member>
+        <member name="P:HuggingFaceClient.DTO.TextToImage.TextToImageParametersDto.Width">
+            <summary>
+            Specifies the width (in pixels) of the generated image.
+            </summary>
+        </member>
+        <member name="P:HuggingFaceClient.DTO.TextToImage.TextToImageParametersDto.Height">
+            <summary>
+            Specifies the height (in pixels) of the generated image.
+            </summary>
+        </member>
+        <member name="P:HuggingFaceClient.DTO.TextToImage.TextToImageParametersDto.Scheduler">
+            <summary>
+            Specifies the scheduler used to manage the image generation process.
+            </summary>
+        </member>
+        <member name="P:HuggingFaceClient.DTO.TextToImage.TextToImageParametersDto.Seed">
+            <summary>
+            Specifies the seed value for deterministic image generation.
+            </summary>
+        </member>
+        <member name="T:HuggingFaceClient.DTO.TextToImage.TextToImageRequestDto">
+            
+             Represents a request to generate an image from a text prompt.
+            
+        </member>
+        <member name="P:HuggingFaceClient.DTO.TextToImage.TextToImageRequestDto.Inputs">
+            
+             Contains the primary text input or description.
+            
+        </member>
+        <member name="P:HuggingFaceClient.DTO.TextToImage.TextToImageRequestDto.Prompt">
+            <summary>
+            Provides the main prompt guiding the image generation process.
+            </summary>
+        </member>
+        <member name="P:HuggingFaceClient.DTO.TextToImage.TextToImageRequestDto.ParametersDto">
+            <summary>
+            Contains additional parameters influencing the image generation behavior.
+            </summary>
+        </member>
+        <member name="T:HuggingFaceClient.DTO.TextToImage.Response.DataChunkDto">
+            
+             Represents a chunk of data in the text-to-image response.
+            
+        </member>
+        <member name="P:HuggingFaceClient.DTO.TextToImage.Response.DataChunkDto.Index">
+            
+             The index of the data chunk.
+            
+        </member>
+        <member name="P:HuggingFaceClient.DTO.TextToImage.Response.DataChunkDto.Url">
+            <summary>
+            The URL associated with the data chunk.
+            </summary>
+        </member>
+        <member name="P:HuggingFaceClient.DTO.TextToImage.Response.DataChunkDto.Timings">
+            <summary>
+            Timing information for the generation process.
+            </summary>
+        </member>
+        <member name="T:HuggingFaceClient.DTO.TextToImage.Response.TimingsDto">
+            <summary>
+            Contains timing data related to the inference process.
+            </summary>
+        </member>
+        <member name="P:HuggingFaceClient.DTO.TextToImage.Response.TimingsDto.Inference">
+            <summary>
+            Duration of the inference step in seconds.
+            </summary>
+        </member>
+        <member name="T:HuggingFaceClient.DTO.TextToImage.Response.TextToImageResponseDto">
+            
+             Represents the response returned after processing a text-to-image request.
+            
+        </member>
+        <member name="P:HuggingFaceClient.DTO.TextToImage.Response.TextToImageResponseDto.Id">
+            
+             A unique identifier for the text-to-image response.
+            
+        </member>
+        <member name="P:HuggingFaceClient.DTO.TextToImage.Response.TextToImageResponseDto.Object">
+            <summary>
+            Specifies the type or category of the returned object.
+            </summary>
+        </member>
+        <member name="P:HuggingFaceClient.DTO.TextToImage.Response.TextToImageResponseDto.Model">
+            <summary>
+            Indicates the model used for generating the image.
+            </summary>
+        </member>
+        <member name="P:HuggingFaceClient.DTO.TextToImage.Response.TextToImageResponseDto.Data">
+            <summary>
+            Contains a collection of data chunks that include generated image details.
+            </summary>
+        </member>
+        <member name="T:HuggingFaceClient.Service.ChatCompletionService">
+            <summary>
+            Provides methods to interact with Hugging Face API-based Large Language Models (LLMs) for chat completions.
+            </summary>
+        </member>
+        <member name="M:HuggingFaceClient.Service.ChatCompletionService.CreateChatAsync(HuggingFaceClient.DTO.ChatCompletion.ChatCompletionRequestDto)">
+            <summary>
+            Sends a non-streamed chat completion request to the Hugging Face API.
+            </summary>
+            <param name="chatCompletionRequestDto">
+            The request payload containing chat parameters and messages.
+            </param>
+            <returns>
+            A <see cref="T:HuggingFaceClient.DTO.ChatCompletion.Response.ChatCompletionResponseDto"/> containing the model's reply,
+            or <c>null</c> if the request fails.
+            </returns>
+        </member>
+        <member name="M:HuggingFaceClient.Service.ChatCompletionService.CreateChatStreamAsync(HuggingFaceClient.DTO.ChatCompletion.ChatCompletionRequestDto)">
+            <summary>
+            Sends a streamed chat completion request to the Hugging Face API.
+            This method allows processing model responses incrementally as they arrive.
+            </summary>
+            <param name="chatCompletionRequestDto">
+            The request payload configured for streaming.
+            </param>
+            <returns>
+            A list of <see cref="T:HuggingFaceClient.DTO.ChatCompletion.ChatCompletionStreamResponseDto"/> representing streamed partial responses from the model.
+            </returns>
+        </member>
+        <member name="T:HuggingFaceClient.Service.FeatureExtractionService">
+            <summary>
+            Provides functionality to extract feature representations from input data
+            using Hugging Face models via the Hugging Face API.
+            </summary>
+        </member>
+        <member name="M:HuggingFaceClient.Service.FeatureExtractionService.ExtractFeaturesAsync(HuggingFaceClient.DTO.FeatureExtraction.Request.FeatureExtractionRequestDto)">
+            <summary>
+            Sends a feature extraction request to the Hugging Face API and returns the model's feature representation.
+            </summary>
+            <param name="request">
+            A <see cref="T:HuggingFaceClient.DTO.FeatureExtraction.Request.FeatureExtractionRequestDto"/> object containing input data and model parameters.
+            </param>
+            <returns>
+            A <see cref="T:HuggingFaceClient.DTO.FeatureExtraction.Response.FeatureExtractionResponseDto"/> containing the extracted features,
+            or <c>null</c> if the request fails.
+            </returns>
+        </member>
+        <member name="T:HuggingFaceClient.Service.HttpRequestService">
+            
+             Provides methods to send HTTP requests to the HuggingFace API.
+            
+        </member>
+        <member name="M:HuggingFaceClient.Service.HttpRequestService._RequestAsync``2(``0)">
+            <summary>
+            Sends an asynchronous HTTP POST request with a JSON body and deserializes the response.
+            </summary>
+            <typeparam name="TRequest">The type of the request DTO.</typeparam>
+            <typeparam name="TResponse">The type of the expected response DTO.</typeparam>
+            <param name="requestDto">The request data transfer object containing the request payload.</param>
+            <returns>
+            A task that represents the asynchronous operation. The task result contains the deserialized response,
+            or null if an error occurred.
+            </returns>
+        </member>
+        <member name="M:HuggingFaceClient.Service.HttpRequestService._RequestStreamAsync``2(``0)">
+            <summary>
+            Sends an asynchronous HTTP POST request with a JSON body and returns a stream of deserialized responses.
+            </summary>
+            <typeparam name="TRequest">The type of the request DTO.</typeparam>
+            <typeparam name="TResponse">The type of the expected response DTO.</typeparam>
+            <param name="requestDto">The request data transfer object containing the request payload.</param>
+            <returns>
+            An asynchronous enumerable stream of deserialized responses.
+            </returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:HuggingFaceClient.Service.HuggingFaceServiceOrchestrator" -->
+        <member name="P:HuggingFaceClient.Service.HuggingFaceServiceOrchestrator.ChatCompletionService">
+            <summary>
+            Gets the service responsible for handling chat completions.
+            </summary>
+        </member>
+        <member name="P:HuggingFaceClient.Service.HuggingFaceServiceOrchestrator.FeatureExtractionService">
+            <summary>
+            Gets the service responsible for extracting features from input data.
+            </summary>
+        </member>
+        <member name="P:HuggingFaceClient.Service.HuggingFaceServiceOrchestrator.TextToImageService">
+            <summary>
+            Gets the service responsible for generating images from textual descriptions.
+            </summary>
+        </member>
+        <member name="T:HuggingFaceClient.Service.TextToImageService">
+            <summary>
+            Provides functionality to generate images from text prompts
+            using Hugging Face text-to-image models via the API.
+            </summary>
+        </member>
+        <member name="M:HuggingFaceClient.Service.TextToImageService.ConvertTextToImageAsync(HuggingFaceClient.DTO.TextToImage.TextToImageRequestDto)">
+            <summary>
+            Sends a text-to-image generation request to the Hugging Face API.
+            </summary>
+            <param name="textToImageRequest">
+            A <see cref="T:HuggingFaceClient.DTO.TextToImage.TextToImageRequestDto"/> object containing the text prompt and model details.
+            </param>
+            <returns>
+            A <see cref="T:HuggingFaceClient.DTO.TextToImage.Response.TextToImageResponseDto"/> containing the generated image data,
+            or <c>null</c> if the request fails.
+            </returns>
+        </member>
+        <member name="T:HuggingFaceClient.Utilities.HuggingFaceGlobalConfig">
+            
+             Provides global configuration settings for interacting with the HuggingFace API.
+            
+        </member>
+        <member name="P:HuggingFaceClient.Utilities.HuggingFaceGlobalConfig.ApiToken">
+            
+             Stores the API authentication token.
+            
+        </member>
+        <member name="P:HuggingFaceClient.Utilities.HuggingFaceGlobalConfig.ApiBaseUrl">
+            <summary>
+            Stores the base URL for the HuggingFace API.
+            </summary>
+        </member>
+    </members>
+</doc>
