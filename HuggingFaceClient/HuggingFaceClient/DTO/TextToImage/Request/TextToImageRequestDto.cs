@@ -23,12 +23,7 @@ namespace HuggingFaceClient.DTO.TextToImage
         /// </summary>
         [JsonPropertyName("prompt")]
         public string Prompt { get; set; }
-
-        /// <summary>
-        /// Specifies the model used for generating the image.
-        /// </summary>
-        [JsonPropertyName("model")]
-        public string Model { get; set; }
+        
 
         /// <summary>
         /// Contains additional parameters influencing the image generation behavior.

@@ -11,16 +11,16 @@ public class HfClient {
     /// <param name="apiBaseUrl">The base URL of the Hugging Face API endpoint.</param>
     /// <example>
     /// <code>
-    /// var service = new HFClient("hf_xxxx", "https://api-inference.huggingface.co/");
+    /// var service = new HdClient("hf_xxxx", "https://api-inference.huggingface.co/");
     /// </code>
     /// </example>
     public HfClient(string apiToken, string apiBaseUrl) {
         HuggingFaceGlobalConfig.ApiToken = apiToken;
         HuggingFaceGlobalConfig.ApiBaseUrl = apiBaseUrl;
-        HuggingFaceServiceOrchestrator = new HuggingFaceServiceOrchestrator();
     }
 
-    private static HuggingFaceServiceOrchestrator HuggingFaceServiceOrchestrator { get; set; }
+    private static HuggingFaceServiceOrchestrator HuggingFaceServiceOrchestrator { get; set; } =
+        new HuggingFaceServiceOrchestrator();
     
     public ChatCompletionRequestBuilder Chat { get; } = new ChatCompletionRequestBuilder(HuggingFaceServiceOrchestrator);
 

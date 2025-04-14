@@ -1,18 +1,40 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
-    <PropertyGroup>
-        <TargetFramework>net9.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <Title>HuggingFaceHub</Title>
-        <Authors>Kareem Magdy </Authors>
-        <Description>A HuggingFace client for csharp and .NET developers who wanters to integrate with HuggingFace powerful models in easy and flexiable way.</Description>
-    </PropertyGroup>
-
-
-    <ItemGroup>
-      <Folder Include="bin\Debug\net9.0\" />
-    </ItemGroup>
-
-</Project>
+﻿    <Project Sdk="Microsoft.NET.Sdk">
+    
+    
+        <ItemGroup>
+            <None Include="README.md" Pack="true" PackagePath="\"/>
+        </ItemGroup>
+        <ItemGroup>
+            <None Include="logo.png" Pack="true" PackagePath="\" />
+        </ItemGroup>
+        <PropertyGroup>
+            <TargetFramework>net9.0</TargetFramework>
+            <ImplicitUsings>enable</ImplicitUsings>
+            <Nullable>enable</Nullable>
+            <PackageIcon>logo.png</PackageIcon>
+            <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+            <Title>HuggingFaceClient</Title>
+            <PackageId>HuggingFaceClient</PackageId>
+            <PackageReadmeFile>README.md</PackageReadmeFile>
+            <Version>1.0.1</Version>
+            <Authors>Kareem Magdy</Authors>
+            <Company>YourCompany</Company>
+            <Description>A HuggingFace client for C# and .NET developers who want to integrate HuggingFace's powerful models in an easy and flexible way.</Description>
+            <PackageTags>huggingface nlp chatgpt llm ai dotnet ml image feature-extraction api csharp</PackageTags>
+            <PackageProjectUrl>https://github.com/KareemMagdy55/HuggingFaceClient</PackageProjectUrl>
+            <RepositoryUrl>https://github.com/KareemMagdy55/HuggingFaceClient</RepositoryUrl>
+            <RepositoryType>git</RepositoryType>
+            <PackageLicenseExpression>MIT</PackageLicenseExpression>
+            <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+            <IncludeSymbols>true</IncludeSymbols>
+            <IncludeSource>true</IncludeSource>
+        </PropertyGroup>
+    
+    
+    
+    
+        <ItemGroup>
+          <Folder Include="bin\Debug\net9.0\" />
+        </ItemGroup>
+    
+    </Project>

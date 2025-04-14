@@ -69,7 +69,7 @@ public class ChatCompletionRequestBuilder
         return await _huggingFaceServiceOrchestrator.ChatCompletionService.CreateChatAsync(_request);
     }
 
-    public async Task<List<ChatCompletionStreamResponseDto>> StreamAsync() {
+    public async Task<List<ChatCompletionStreamResponseDto>> SendStreamAsync() {
         return await _huggingFaceServiceOrchestrator.ChatCompletionService.CreateChatStreamAsync(_request);
 
     }

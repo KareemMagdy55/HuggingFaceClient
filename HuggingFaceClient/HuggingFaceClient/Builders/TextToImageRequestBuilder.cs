@@ -25,12 +25,7 @@ public class TextToImageRequestBuilder {
         _request.Prompt = prompt;
         return this;
     }
-
-    public TextToImageRequestBuilder WithModel(string model) {
-        _request.Model = model;
-        return this;
-    }
-
+    
     public TextToImageRequestBuilder WithGuidanceScale(float? guidanceScale) {
         _request.ParametersDto.GuidanceScale = guidanceScale;
         return this;

@@ -1,44 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
-  <component name="ChangeListManager">
-    <list default="true" id="cc2afdad-1572-4e1d-92e1-a81249ffbd1f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/HuggingFaceClient/Service/HuggingFaceClientService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HuggingFaceClient/Service/HuggingFaceClientService.cs" afterDir="false" />
-    </list>
-    <option name="SHOW_DIALOG" value="false" />
-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-    <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DpaMonitoringSettings">
-    <option name="autoShow" value="false" />
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;KareemMagdy55&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/KareemMagdy55/HuggingFaceHub.git&quot;,
-    &quot;accountId&quot;: &quot;e5623d9c-a80b-4c27-b6ba-b5f9c577f422&quot;
-  }
-}</component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 6
-}</component>
-  <component name="ProjectId" id="2vXwser2P1xSZQKiwdbggQPnEZE" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent"><![CDATA[{
+    <component name="AutoImportSettings">
+        <option name="autoReloadType" value="SELECTIVE"/>
+    </component>
+    <component name="ChangeListManager">
+        <list default="true" id="cc2afdad-1572-4e1d-92e1-a81249ffbd1f" name="Changes" comment="">
+            <change beforePath="$PROJECT_DIR$/HuggingFaceClient/Service/HuggingFaceClientService.cs" beforeDir="false"
+                    afterPath="$PROJECT_DIR$/HuggingFaceClient/Service/HuggingFaceClientService.cs" afterDir="false"/>
+        </list>
+        <option name="SHOW_DIALOG" value="false"/>
+        <option name="HIGHLIGHT_CONFLICTS" value="true"/>
+        <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false"/>
+        <option name="LAST_RESOLUTION" value="IGNORE"/>
+    </component>
+    <component name="DpaMonitoringSettings">
+        <option name="autoShow" value="false"/>
+    </component>
+    <component name="Git.Settings">
+        <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.."/>
+    </component>
+    <component name="GitHubPullRequestSearchHistory">{
+        &quot;lastFilter&quot;: {
+        &quot;state&quot;: &quot;OPEN&quot;,
+        &quot;assignee&quot;: &quot;KareemMagdy55&quot;
+        }
+        }
+    </component>
+    <component name="GithubPullRequestsUISettings">{
+        &quot;selectedUrlAndAccountId&quot;: {
+        &quot;url&quot;: &quot;https://github.com/KareemMagdy55/HuggingFaceHub.git&quot;,
+        &quot;accountId&quot;: &quot;e5623d9c-a80b-4c27-b6ba-b5f9c577f422&quot;
+        }
+        }
+    </component>
+    <component name="ProjectColorInfo">{
+        &quot;associatedIndex&quot;: 6
+        }
+    </component>
+    <component name="ProjectId" id="2vXwser2P1xSZQKiwdbggQPnEZE"/>
+    <component name="ProjectViewState">
+        <option name="hideEmptyMiddlePackages" value="true"/>
+        <option name="showLibraryContents" value="true"/>
+    </component>
+    <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     ".NET Static Method.HuggingFaceClient.Class1.Main.executor": "Run",
     ".NET Static Method.HuggingFaceHub.Class1.Main.executor": "Run",
@@ -59,96 +63,105 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Static Method.HuggingFaceClient.Class1.Main">
-    <configuration name="HFClient" type="DotNetStaticMethod" factoryName=".NET Static Method" temporary="true">
-      <option name="EXE_PATH" value="C:\Program Files\JetBrains\JetBrains Rider 2023.3.4\lib\ReSharperHost\JetLauncherILc.exe" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HuggingFaceClient/bin/Debug/net9.0" />
-      <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="USE_MONO" value="0" />
-      <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/HuggingFaceClient/HuggingFaceClient.csproj" />
-      <option name="PROJECT_TFM" value="net9.0" />
-      <option name="CLASS_NAME" value="HuggingFaceHub.Class1" />
-      <option name="METHOD_NAME" value="Main" />
-      <method v="2">
-        <option name="Build" />
-      </method>
-    </configuration>
-    <configuration name="HuggingFaceClient.Class1.Main" type="DotNetStaticMethod" factoryName=".NET Static Method" temporary="true">
-      <option name="EXE_PATH" value="C:\Program Files\JetBrains\JetBrains Rider 2023.3.4\lib\ReSharperHost\JetLauncherILc.exe" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="USE_MONO" value="0" />
-      <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/HuggingFaceClient/HuggingFaceClient.csproj" />
-      <option name="PROJECT_TFM" value="net9.0" />
-      <option name="CLASS_NAME" value="HuggingFaceClient.Class1" />
-      <option name="METHOD_NAME" value="Main" />
-      <method v="2">
-        <option name="Build" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue=".NET Static Method.HuggingFaceClient.Class1.Main" />
-        <item itemvalue=".NET Static Method.HFClient" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="cc2afdad-1572-4e1d-92e1-a81249ffbd1f" name="Changes" comment="" />
-      <created>1744304935677</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1744304935677</updated>
-      <workItem from="1744304939984" duration="437000" />
-      <workItem from="1744488465205" duration="7856000" />
-      <workItem from="1744544819975" duration="6640000" />
-      <workItem from="1744554903038" duration="6113000" />
-    </task>
-    <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/HuggingFaceClient/Class1.cs</url>
-          <line>11</line>
-          <properties documentPath="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceHub\HuggingFaceClient\Class1.cs" containingFunctionPresentation="Method 'Main'">
-            <startOffsets>
-              <option value="420" />
-            </startOffsets>
-            <endOffsets>
-              <option value="664" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
+    <component name="RunManager" selected=".NET Static Method.HuggingFaceClient.Class1.Main">
+        <configuration name="HFClient" type="DotNetStaticMethod" factoryName=".NET Static Method" temporary="true">
+            <option name="EXE_PATH"
+                    value="C:\Program Files\JetBrains\JetBrains Rider 2023.3.4\lib\ReSharperHost\JetLauncherILc.exe"/>
+            <option name="PROGRAM_PARAMETERS" value=""/>
+            <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HuggingFaceClient/bin/Debug/net9.0"/>
+            <option name="PASS_PARENT_ENVS" value="1"/>
+            <option name="USE_EXTERNAL_CONSOLE" value="0"/>
+            <option name="USE_MONO" value="0"/>
+            <option name="RUNTIME_ARGUMENTS" value=""/>
+            <option name="PROJECT_PATH" value="$PROJECT_DIR$/HuggingFaceClient/HuggingFaceClient.csproj"/>
+            <option name="PROJECT_TFM" value="net9.0"/>
+            <option name="CLASS_NAME" value="HuggingFaceHub.Class1"/>
+            <option name="METHOD_NAME" value="Main"/>
+            <method v="2">
+                <option name="Build"/>
+            </method>
+        </configuration>
+        <configuration name="HuggingFaceClient.Class1.Main" type="DotNetStaticMethod" factoryName=".NET Static Method"
+                       temporary="true">
+            <option name="EXE_PATH"
+                    value="C:\Program Files\JetBrains\JetBrains Rider 2023.3.4\lib\ReSharperHost\JetLauncherILc.exe"/>
+            <option name="PROGRAM_PARAMETERS" value=""/>
+            <option name="WORKING_DIRECTORY" value=""/>
+            <option name="PASS_PARENT_ENVS" value="1"/>
+            <option name="USE_EXTERNAL_CONSOLE" value="0"/>
+            <option name="USE_MONO" value="0"/>
+            <option name="RUNTIME_ARGUMENTS" value=""/>
+            <option name="PROJECT_PATH" value="$PROJECT_DIR$/HuggingFaceClient/HuggingFaceClient.csproj"/>
+            <option name="PROJECT_TFM" value="net9.0"/>
+            <option name="CLASS_NAME" value="HuggingFaceClient.Class1"/>
+            <option name="METHOD_NAME" value="Main"/>
+            <method v="2">
+                <option name="Build"/>
+            </method>
+        </configuration>
+        <recent_temporary>
+            <list>
+                <item itemvalue=".NET Static Method.HuggingFaceClient.Class1.Main"/>
+                <item itemvalue=".NET Static Method.HFClient"/>
+            </list>
+        </recent_temporary>
+    </component>
+    <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0"
+               DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true"/>
+    <component name="TaskManager">
+        <task active="true" id="Default" summary="Default task">
+            <changelist id="cc2afdad-1572-4e1d-92e1-a81249ffbd1f" name="Changes" comment=""/>
+            <created>1744304935677</created>
+            <option name="number" value="Default"/>
+            <option name="presentableId" value="Default"/>
+            <updated>1744304935677</updated>
+            <workItem from="1744304939984" duration="437000"/>
+            <workItem from="1744488465205" duration="7856000"/>
+            <workItem from="1744544819975" duration="6640000"/>
+            <workItem from="1744554903038" duration="6113000"/>
+        </task>
+        <servers/>
+    </component>
+    <component name="TypeScriptGeneratedFilesManager">
+        <option name="version" value="3"/>
+    </component>
+    <component name="UnityProjectConfiguration" hasMinimizedUI="false"/>
+    <component name="Vcs.Log.Tabs.Properties">
+        <option name="TAB_STATES">
+            <map>
+                <entry key="MAIN">
+                    <value>
+                        <State/>
+                    </value>
+                </entry>
+            </map>
+        </option>
+    </component>
+    <component name="VcsManagerConfiguration">
+        <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true"/>
+    </component>
+    <component name="XDebuggerManager">
+        <breakpoint-manager>
+            <breakpoints>
+                <line-breakpoint enabled="true" type="DotNet Breakpoints">
+                    <url>file://$PROJECT_DIR$/HuggingFaceClient/Class1.cs</url>
+                    <line>11</line>
+                    <properties
+                            documentPath="K:\Kareem's\Programming vol.3\Github\HuggingFaceHub\HuggingFaceHub\HuggingFaceClient\Class1.cs"
+                            containingFunctionPresentation="Method 'Main'">
+                        <startOffsets>
+                            <option value="420"/>
+                        </startOffsets>
+                        <endOffsets>
+                            <option value="664"/>
+                        </endOffsets>
+                    </properties>
+                    <option name="timeStamp" value="3"/>
+                </line-breakpoint>
+            </breakpoints>
+        </breakpoint-manager>
+    </component>
+    <PropertyGroup>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    </PropertyGroup>
 </project>
