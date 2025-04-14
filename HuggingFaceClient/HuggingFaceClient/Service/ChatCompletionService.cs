@@ -21,7 +21,7 @@ namespace HuggingFaceClient.Service {
             CreateChatAsync(ChatCompletionRequestDto chatCompletionRequestDto) {
             chatCompletionRequestDto.Stream = false;
 
-            return await HttpRequestService._RequestAsync<ChatCompletionRequestDto, ChatCompletionResponseDto>(
+            return await HttpRequestService._PostRequestAsync<ChatCompletionRequestDto, ChatCompletionResponseDto>(
                 chatCompletionRequestDto);
         }
 

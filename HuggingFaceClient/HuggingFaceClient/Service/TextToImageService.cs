@@ -21,7 +21,7 @@ namespace HuggingFaceClient.Service
         /// </returns>
         public async Task<TextToImageResponseDto?> ConvertTextToImageAsync(TextToImageRequestDto textToImageRequest)
         {
-            return await HttpRequestService._RequestAsync<TextToImageRequestDto, TextToImageResponseDto>(textToImageRequest);
+            return await HttpRequestService._PostRequestAsync<TextToImageRequestDto, TextToImageResponseDto>(textToImageRequest);
         }
     }
 }

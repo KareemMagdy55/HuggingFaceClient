@@ -4,6 +4,236 @@
         <name>HuggingFaceClient</name>
     </assembly>
     <members>
+        <member name="T:HuggingFaceClient.Builders.ChatCompletionRequestBuilder">
+            <summary>
+            A fluent builder for constructing and sending chat completion requests to Hugging Face.
+            
+            This builder simplifies the creation of <see cref="T:HuggingFaceClient.DTO.ChatCompletion.ChatCompletionRequestDto"/> instances by providing a
+            chainable interface and encapsulates logic for populating chat messages and controlling generation behavior.
+            </summary>
+        </member>
+        <member name="M:HuggingFaceClient.Builders.ChatCompletionRequestBuilder.#ctor(HuggingFaceClient.Service.HuggingFaceServiceOrchestrator)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HuggingFaceClient.Builders.ChatCompletionRequestBuilder"/> class.
+            </summary>
+            <param name="huggingFaceServiceOrchestrator">The orchestrator responsible for managing service calls, including chat completion requests.</param>
+        </member>
+        <member name="M:HuggingFaceClient.Builders.ChatCompletionRequestBuilder.WithModel(System.String)">
+            <summary>
+            Specifies the model to use for chat completion.
+            </summary>
+            <param name="model">The model identifier (e.g., "mistral-7b", "meta-llama").</param>
+            <returns>The current builder instance.</returns>
+        </member>
+        <member name="M:HuggingFaceClient.Builders.ChatCompletionRequestBuilder.WithTemperature(System.Double)">
+            <summary>
+            Sets the temperature to control randomness in the output.
+            Higher values like 1.0 make the output more random, while lower values like 0.2 make it more focused and deterministic.
+            </summary>
+            <param name="temperature">A value between 0.0 and 1.0.</param>
+            <returns>The current builder instance.</returns>
+        </member>
+        <member name="M:HuggingFaceClient.Builders.ChatCompletionRequestBuilder.WithTopP(System.Double)">
+            <summary>
+            Sets the top-p value for nucleus sampling.
+            The model considers the smallest possible set of words whose cumulative probability exceeds the top-p value.
+            </summary>
+            <param name="topP">A probability value between 0.0 and 1.0.</param>
+            <returns>The current builder instance.</returns>
+        </member>
+        <member name="M:HuggingFaceClient.Builders.ChatCompletionRequestBuilder.WithMaxNewTokens(System.Int32)">
+            <summary>
+            Specifies the maximum number of new tokens the model is allowed to generate in the response.
+            </summary>
+            <param name="maxNewTokens">Maximum number of new tokens.</param>
+            <returns>The current builder instance.</returns>
+        </member>
+        <member name="M:HuggingFaceClient.Builders.ChatCompletionRequestBuilder.WithRepetitionPenalty(System.Double)">
+            <summary>
+            Applies a repetition penalty to discourage repeated phrases or tokens.
+            Values > 1.0 penalize repetition more heavily.
+            </summary>
+            <param name="penalty">The repetition penalty value.</param>
+            <returns>The current builder instance.</returns>
+        </member>
+        <member name="M:HuggingFaceClient.Builders.ChatCompletionRequestBuilder.AddUserMessage(System.String)">
+            <summary>
+            Adds a user message to the chat conversation history.
+            </summary>
+            <param name="content">The content of the user message.</param>
+            <returns>The current builder instance.</returns>
+        </member>
+        <member name="M:HuggingFaceClient.Builders.ChatCompletionRequestBuilder.AddAssistantMessage(System.String)">
+            <summary>
+            Adds an assistant message to the chat conversation history.
+            </summary>
+            <param name="content">The content of the assistant's message.</param>
+            <returns>The current builder instance.</returns>
+        </member>
+        <member name="M:HuggingFaceClient.Builders.ChatCompletionRequestBuilder.AddSystemMessage(System.String)">
+            <summary>
+            Adds a system message to the chat conversation history, typically used to set behavior or context.
+            </summary>
+            <param name="content">The content of the system message.</param>
+            <returns>The current builder instance.</returns>
+        </member>
+        <member name="M:HuggingFaceClient.Builders.ChatCompletionRequestBuilder.SendAsync">
+            <summary>
+            Sends the chat request to Hugging Face and returns the full structured response.
+            </summary>
+            <returns>A task containing the chat completion result from the model.</returns>
+        </member>
+        <member name="M:HuggingFaceClient.Builders.ChatCompletionRequestBuilder.SendStreamAsync">
+            <summary>
+            Sends the chat request to Hugging Face using streaming mode,
+            returning a list of response chunks progressively generated by the model.
+            </summary>
+            <returns>A task containing a list of streamed chat completion responses.</returns>
+        </member>
+        <member name="T:HuggingFaceClient.Builders.FeatureExtractionRequestBuilder">
+            <summary>
+            A builder class to configure and send feature extraction requests to the Hugging Face API.
+            
+            This builder provides a fluent interface for configuring the <see cref="T:HuggingFaceClient.DTO.FeatureExtraction.Request.FeatureExtractionRequestDto"/>
+            and sending it using <see cref="P:HuggingFaceClient.Service.HuggingFaceServiceOrchestrator.FeatureExtractionService"/>.
+            </summary>
+        </member>
+        <member name="M:HuggingFaceClient.Builders.FeatureExtractionRequestBuilder.#ctor(HuggingFaceClient.Service.HuggingFaceServiceOrchestrator)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HuggingFaceClient.Builders.FeatureExtractionRequestBuilder"/> class.
+            </summary>
+            <param name="huggingFaceServiceOrchestrator">The service orchestrator that handles API calls.</param>
+        </member>
+        <member name="M:HuggingFaceClient.Builders.FeatureExtractionRequestBuilder.WithInputs(System.Object)">
+            <summary>
+            Sets the input data to be used for feature extraction.
+            </summary>
+            <param name="inputs">The input object (e.g., text, sentence, etc.).</param>
+            <returns>The builder instance.</returns>
+        </member>
+        <member name="M:HuggingFaceClient.Builders.FeatureExtractionRequestBuilder.WithNormalize(System.Boolean)">
+            <summary>
+            Sets whether the extracted features should be normalized.
+            </summary>
+            <param name="normalize">True to normalize, false otherwise.</param>
+            <returns>The builder instance.</returns>
+        </member>
+        <member name="M:HuggingFaceClient.Builders.FeatureExtractionRequestBuilder.WithPromptName(System.String)">
+            <summary>
+            Sets the optional prompt name to use for extraction.
+            </summary>
+            <param name="promptName">The name of the prompt.</param>
+            <returns>The builder instance.</returns>
+        </member>
+        <member name="M:HuggingFaceClient.Builders.FeatureExtractionRequestBuilder.WithTruncate(System.Boolean)">
+            <summary>
+            Enables or disables truncation of the input.
+            </summary>
+            <param name="truncate">True to truncate input if too long.</param>
+            <returns>The builder instance.</returns>
+        </member>
+        <member name="M:HuggingFaceClient.Builders.FeatureExtractionRequestBuilder.WithTruncationDirection(System.String)">
+            <summary>
+            Sets the truncation direction to use if truncation is enabled.
+            </summary>
+            <param name="truncationDirection">e.g., "left" or "right".</param>
+            <returns>The builder instance.</returns>
+        </member>
+        <member name="M:HuggingFaceClient.Builders.FeatureExtractionRequestBuilder.SendAsync">
+            <summary>
+            Sends the feature extraction request and returns the response.
+            </summary>
+            <returns>A task that represents the asynchronous operation. The task result contains the extracted features.</returns>
+        </member>
+        <member name="T:HuggingFaceClient.Builders.TextToImageRequestBuilder">
+             <summary>
+             A fluent builder for constructing and sending text-to-image generation requests to Hugging Face.
+            
+             This class wraps the creation of a <see cref="T:HuggingFaceClient.DTO.TextToImage.TextToImageRequestDto"/> and allows you to customize image
+             generation parameters such as guidance scale, image dimensions, negative prompts, scheduler, and more.
+             Once the configuration is complete, the request can be sent using the <see cref="M:HuggingFaceClient.Builders.TextToImageRequestBuilder.SendAsync"/> method.
+             </summary>
+        </member>
+        <member name="M:HuggingFaceClient.Builders.TextToImageRequestBuilder.#ctor(HuggingFaceClient.Service.HuggingFaceServiceOrchestrator)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HuggingFaceClient.Builders.TextToImageRequestBuilder"/> class.
+            </summary>
+            <param name="huggingFaceServiceOrchestrator">The orchestrator responsible for invoking the Hugging Face image generation service.</param>
+        </member>
+        <member name="M:HuggingFaceClient.Builders.TextToImageRequestBuilder.WithInputs(System.String)">
+            <summary>
+            Sets the textual input or prompt used to generate the image.
+            Corresponds to <see cref="P:HuggingFaceClient.DTO.TextToImage.TextToImageRequestDto.Inputs"/>.
+            </summary>
+            <param name="inputs">The description or text prompt guiding the image generation.</param>
+            <returns>The current builder instance.</returns>
+        </member>
+        <member name="M:HuggingFaceClient.Builders.TextToImageRequestBuilder.WithGuidanceScale(System.Single)">
+            <summary>
+            Sets the guidance scale to influence how closely the generated image follows the prompt.
+            Corresponds to <see cref="P:HuggingFaceClient.DTO.TextToImage.TextToImageParametersDto.GuidanceScale"/>.
+            </summary>
+            <param name="guidanceScale">A float value, typically between 1.0 and 20.0.</param>
+            <returns>The current builder instance.</returns>
+        </member>
+        <member name="M:HuggingFaceClient.Builders.TextToImageRequestBuilder.WithNegativePrompt(System.String)">
+            <summary>
+            Sets a negative prompt to instruct the model what to avoid during image generation.
+            Corresponds to <see cref="P:HuggingFaceClient.DTO.TextToImage.TextToImageParametersDto.NegativePrompt"/>.
+            </summary>
+            <param name="negativePrompt">Text describing unwanted content in the image.</param>
+            <returns>The current builder instance.</returns>
+        </member>
+        <member name="M:HuggingFaceClient.Builders.TextToImageRequestBuilder.WithInferenceSteps(System.Int32)">
+            <summary>
+            Sets the number of inference steps for the generation process.
+            Higher values can improve image quality at the cost of performance.
+            Corresponds to <see cref="P:HuggingFaceClient.DTO.TextToImage.TextToImageParametersDto.NumInferenceSteps"/>.
+            </summary>
+            <param name="steps">Number of steps (e.g., 25, 50).</param>
+            <returns>The current builder instance.</returns>
+        </member>
+        <member name="M:HuggingFaceClient.Builders.TextToImageRequestBuilder.WithWidth(System.Int32)">
+            <summary>
+            Sets the width of the resulting image in pixels.
+            Corresponds to <see cref="P:HuggingFaceClient.DTO.TextToImage.TextToImageParametersDto.Width"/>.
+            </summary>
+            <param name="width">Image width in pixels (e.g., 512).</param>
+            <returns>The current builder instance.</returns>
+        </member>
+        <member name="M:HuggingFaceClient.Builders.TextToImageRequestBuilder.WithHeight(System.Int32)">
+            <summary>
+            Sets the height of the resulting image in pixels.
+            Corresponds to <see cref="P:HuggingFaceClient.DTO.TextToImage.TextToImageParametersDto.Height"/>.
+            </summary>
+            <param name="height">Image height in pixels (e.g., 512).</param>
+            <returns>The current builder instance.</returns>
+        </member>
+        <member name="M:HuggingFaceClient.Builders.TextToImageRequestBuilder.WithScheduler(System.String)">
+            <summary>
+            Specifies the scheduler algorithm used for generating the image.
+            This controls the diffusion process and can impact style and speed.
+            Corresponds to <see cref="P:HuggingFaceClient.DTO.TextToImage.TextToImageParametersDto.Scheduler"/>.
+            </summary>
+            <param name="scheduler">The scheduler type (e.g., "ddim", "pndm", "euler").</param>
+            <returns>The current builder instance.</returns>
+        </member>
+        <member name="M:HuggingFaceClient.Builders.TextToImageRequestBuilder.WithSeed(System.Int32)">
+            <summary>
+            Sets a random seed for deterministic image generation.
+            Using the same seed and prompt will produce identical images.
+            Corresponds to <see cref="P:HuggingFaceClient.DTO.TextToImage.TextToImageParametersDto.Seed"/>.
+            </summary>
+            <param name="seed">A numeric seed value.</param>
+            <returns>The current builder instance.</returns>
+        </member>
+        <member name="M:HuggingFaceClient.Builders.TextToImageRequestBuilder.SendAsync">
+            <summary>
+            Sends the constructed text-to-image request to Hugging Face and returns the response.
+            Internally invokes <see cref="M:HuggingFaceClient.Service.TextToImageService.ConvertTextToImageAsync(HuggingFaceClient.DTO.TextToImage.TextToImageRequestDto)"/>.
+            </summary>
+            <returns>A task containing the image generation response.</returns>
+        </member>
         <member name="M:HuggingFaceClient.Builders.HfClient.#ctor(System.String,System.String)">
             <summary>
             Initializes a new instance of the <see cref="T:HuggingFaceClient.Builders.HfClient"/> class.
@@ -447,9 +677,21 @@
              Provides methods to send HTTP requests to the HuggingFace API.
             
         </member>
-        <member name="M:HuggingFaceClient.Service.HttpRequestService._RequestAsync``2(``0)">
+        <member name="M:HuggingFaceClient.Service.HttpRequestService._PostRequestAsync``2(``0)">
             <summary>
             Sends an asynchronous HTTP POST request with a JSON body and deserializes the response.
+            </summary>
+            <typeparam name="TRequest">The type of the request DTO.</typeparam>
+            <typeparam name="TResponse">The type of the expected response DTO.</typeparam>
+            <param name="requestDto">The request data transfer object containing the request payload.</param>
+            <returns>
+            A task that represents the asynchronous operation. The task result contains the deserialized response,
+            or null if an error occurred.
+            </returns>
+        </member>
+        <member name="M:HuggingFaceClient.Service.HttpRequestService._GetRequestAsync``2(``0)">
+            <summary>
+            Sends an asynchronous HTTP Get request with a JSON body and deserializes the response.
             </summary>
             <typeparam name="TRequest">The type of the request DTO.</typeparam>
             <typeparam name="TResponse">The type of the expected response DTO.</typeparam>
@@ -518,6 +760,45 @@
             <summary>
             Stores the base URL for the HuggingFace API.
             </summary>
+        </member>
+        <member name="T:HfSpaceClient">
+            <summary>
+            A lightweight client for interacting with Hugging Face Spaces via HTTP requests.
+            
+            This class provides an abstraction layer to configure the API base URL for a specific Hugging Face Space 
+            and execute typed requests using a generic <see cref="!:RequestAsync&lt;TRequest, TResponse&gt;"/> method.
+            </summary>
+        </member>
+        <member name="M:HfSpaceClient.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HfSpaceClient"/> class.
+            This sets the base URL for all subsequent HTTP requests to a specific Hugging Face Space.
+            </summary>
+            <param name="spaceApiUrl">The base URL of the Hugging Face Space (e.g., https://space-name.hf.space).</param>
+        </member>
+        <member name="M:HfSpaceClient.PostRequestAsync``2(``0)">
+            <summary>
+            Sends an HTTP Post request to the configured Hugging Face Space API and deserializes the response.
+            </summary>
+            <typeparam name="TRequest">The request DTO type used as the POST body.</typeparam>
+            <typeparam name="TResponse">The expected response DTO type.</typeparam>
+            <param name="requestDto">An instance of the request DTO to be serialized and sent.</param>
+            <returns>
+            A task that represents the asynchronous operation, containing the deserialized response DTO,
+            or <c>null</c> if the request failed or returned an empty response.
+            </returns>
+        </member>
+        <member name="M:HfSpaceClient.GetRequestAsync``2(``0)">
+            <summary>
+            Sends an HTTP Get request to the configured Hugging Face Space API and deserializes the response.
+            </summary>
+            <typeparam name="TRequest">The request DTO type used as the POST body.</typeparam>
+            <typeparam name="TResponse">The expected response DTO type.</typeparam>
+            <param name="requestDto">An instance of the request DTO to be serialized and sent.</param>
+            <returns>
+            A task that represents the asynchronous operation, containing the deserialized response DTO,
+            or <c>null</c> if the request failed or returned an empty response.
+            </returns>
         </member>
     </members>
 </doc>

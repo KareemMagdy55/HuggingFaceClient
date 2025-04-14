@@ -94,6 +94,18 @@ Console.WriteLine(message.Result?.Data[0].Url);
 ```
 
 ---
+## ✨ Connect to your Hf Space
+
+```csharp
+var hfSpace = new HfSpaceClient("x.y.z/predict");
+
+var inputDto = new InputDto();
+
+var result = hf.GetRequestAsync<InputDto, OutputDto>(inputDto);
+Console.WriteLine(result.Result);
+```
+
+---
 
 ## 📄 License
 

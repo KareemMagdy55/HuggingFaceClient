@@ -22,7 +22,7 @@ namespace HuggingFaceClient.Service
        
         public async Task<FeatureExtractionResponseDto?> ExtractFeaturesAsync(FeatureExtractionRequestDto request)
         {
-            return await HttpRequestService._RequestAsync<FeatureExtractionRequestDto, FeatureExtractionResponseDto>(request);
+            return await HttpRequestService._PostRequestAsync<FeatureExtractionRequestDto, FeatureExtractionResponseDto>(request);
         }
     }
 }

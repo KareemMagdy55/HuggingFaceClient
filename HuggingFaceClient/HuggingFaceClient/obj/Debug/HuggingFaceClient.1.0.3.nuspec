@@ -12,7 +12,7 @@
     <projectUrl>https://github.com/KareemMagdy55/HuggingFaceClient</projectUrl>
     <description>A HuggingFace client for C# and .NET developers who want to integrate HuggingFace's powerful models in an easy and flexible way.</description>
     <tags>huggingface nlp chatgpt llm ai dotnet ml image feature-extraction api csharp</tags>
-    <repository type="git" url="https://github.com/KareemMagdy55/HuggingFaceClient" commit="75c1df2cd71e3e90ffa914f0c5db7b0eff6dc192" />
+    <repository type="git" url="https://github.com/KareemMagdy55/HuggingFaceClient" commit="b630c1268665c5dbfc79a558d7876f1d81820d5a" />
     <dependencies>
       <group targetFramework="net9.0" />
     </dependencies>
