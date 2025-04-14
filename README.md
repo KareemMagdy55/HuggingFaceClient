@@ -94,6 +94,18 @@ Console.WriteLine(message.Result?.Data[0].Url);
 ```
 
 ---
+## ✨ Connect to your Hf Space
+
+```csharp
+var hfSpace = new HfSpaceClient("x.y.z/predict");
+
+var inputDto = new InputDto();
+
+var result = hf.GetRequestAsync<InputDto, OutputDto>(inputDto);
+Console.WriteLine(result.Result);
+```
+
+---
 
 ## 📄 License
 
@@ -104,12 +116,3 @@ This project is licensed under the MIT License.
 ## 🤝 Contributing
 
 Contributions, suggestions, and feature requests are welcome! Feel free to open an issue or submit a pull request.
-
----
-
-## 🔗 Links
-
-- **NuGet Package:** https://www.nuget.org/packages/HuggingFace.Client
-- **GitHub Repository:** https://github.com/yourusername/HuggingFace.Client
-- **Hugging Face Docs:** https://huggingface.co/docs
-
